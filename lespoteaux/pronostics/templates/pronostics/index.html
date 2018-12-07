@@ -1,0 +1,33 @@
+{% extends 'pronostics/base.html' %}
+
+{% block content %}
+{% load static %}
+<section>
+  <div class="header">
+    <img src="{% static 'img/logofefe.svg' %}" alt="logo_les_poteaux">
+  </div>
+</section>
+<section class="article-element">
+  <div class="article-jaune">
+    <div class="article-header">
+      <i id="logo-header" class="fas fa-trophy"></i>
+    </div>
+    <p id="article-title">CREE UN CHAMPIONNAT AVEC TES AMIS</p>
+    <p id="article-content">Defi tes potes et pouvre leur que tu es celui qui connait le mieux la ligue 1.</p>
+  </div>
+  <div class="article-bleu">
+    <div class="article-header">
+      <i id="logo-header-jaune" class="fas fa-edit"></i>
+    </div>
+    <p id="article-title-jaune">RENTRE TES PRONOS</p>
+    <p id="article-content-jaune">Il est l'heure de montrer qui est le meilleur pronostiqueur. Rentre tes pronos pour la journee de ligue 1. Si tu n'as vraiment pas d'inspiration, ne t'en fais pas tu pourras demander l'avis de la communaute.</p>
+  </div>
+  <div class="article-jaune">
+    <div class="article-header">
+      <i id="logo-header" class="fas fa-table"></i>
+    </div>
+    <p id="article-title">IL EST L'HEURE DE JACTER</p>
+    <p id="article-content">Tu as trouve le score exacte, la communaute t'a donne le bon tuyaux, dis le a tes potes, tu en auras un qui va te demander tes pronos la semaine d'apres.</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% autoescape off %}
+Bienvenue a toi nouveau poteau,
+Clique sur le lien en dessous pour valider ton inscription et commencer a jouer.
+http://{{domain}}{% url 'accounts:active' uidb64=uid token=token%}
+{% endautoescape %}
