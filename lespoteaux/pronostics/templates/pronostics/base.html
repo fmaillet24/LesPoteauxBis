@@ -9,25 +9,29 @@
     <title>Les Poteaux</title>
   </head>
   <body>
-    <div class="mobile">
-      <i id="burger" class="fa fa-bars" aria-hidden="true"></i>
+    <div class="background-image">
+      <div class="mobile">
+        <i id="burger" class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div id="block-mobile">
+        <i id="cross" class="fas fa-times"></i>
+        <a class="mobile-nav" href="{% url 'accounts:login' %}">Connexion</a>
+        <a class="mobile-nav" href="{% url 'accounts:register' %}">Inscription</a>
+      </div>
+      <nav>
+        <ul>
+          <div class="align-left">
+            <li><a href="{% url 'pronostics:index' %}">Les Poteaux</a></li>
+          </div>
+          <div class="align-right">
+            <li class="underline"><a href="{% url 'accounts:login' %}">Connexion</a></li>
+            <li class="underline"><a href="{% url 'accounts:register' %}">Inscription</a></li>
+          </div>
+        </ul>
+      </nav>
+      {% block header %}
+      {% endblock %}
     </div>
-    <div id="block-mobile">
-      <i id="cross" class="fas fa-times"></i>
-      <a class="mobile-nav" href="#">Connexion</a>
-      <a class="mobile-nav" href="#">Inscription</a>
-    </div>
-    <nav>
-      <ul>
-        <div class="align-left">
-          <li><a href="#">Les Poteaux</a></li>
-        </div>
-        <div class="align-right">
-          <li class="underline"><a href="#">Connexion</a></li>
-          <li class="underline"><a href="#">Inscription</a></li>
-        </div>
-      </ul>
-    </nav>
     {% block content %}
     {% endblock %}
     <script type="text/javascript" src="{% static 'js/navbar.js'%}"></script>

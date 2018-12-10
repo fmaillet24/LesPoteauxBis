@@ -45,12 +45,13 @@ def register_view(request):
         form = RegisterForm(request.POST)
 
         if form.is_valid():
+            username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             first_n = form.cleaned_data['first_name']
             last_n = form.cleaned_data['last_name']
             password = form.cleaned_data['confirm']
 
-            if User.objects.filter(username=email).exists():
+            if User.objects.filter(username=username).exists():
                 messages.error(request, "L'utilisateur existe deja.")
                 return redirect('accounts:login')
             else:

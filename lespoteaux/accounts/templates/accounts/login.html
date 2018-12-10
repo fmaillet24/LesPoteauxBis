@@ -1,11 +1,22 @@
 {% extends 'pronostics/base.html' %}
 
 {%block content%}
-<div class="">
-  <form method="post">
+{% load static %}
+<div class="register-form">
+  <i id="register-logo" class="fas fa-sign-in-alt"></i>
+  <form method="post" id="form-input">
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" name="submit">Se connecter</button>
+    {% load widget_tweaks %}
+    <div class="email-input">
+      <i class="fas fa-user"></i>
+      {{ form.email|add_class:""|attr:"placeholder:Email" }}
+    </div>
+    <div class="email-input">
+      <i class="fas fa-lock"></i>
+      {{ form.password|attr:"id:password"|attr:"placeholder:Mot de passe" }}
+    </div>
+    <button type="submit" name="submit">Connexion</button>
   </form>
 </div>
+<script type="text/javascript" src="{% static 'js/register.js'%}"></script>
 {%endblock%}

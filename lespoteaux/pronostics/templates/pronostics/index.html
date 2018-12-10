@@ -1,12 +1,13 @@
 {% extends 'pronostics/base.html' %}
 
-{% block content %}
 {% load static %}
-<section>
-  <div class="header">
-    <img src="{% static 'img/logofefe.svg' %}" alt="logo_les_poteaux">
-  </div>
-</section>
+
+{% block header %}
+<img id="logo-background" src="{% static 'img/logofefe.svg' %}" alt="logo_les_poteaux">
+<i id="down-arrow" class="fas fa-angle-down"></i>
+{% endblock%}
+
+{% block content %}
 <section class="article-element">
   <div class="article-jaune">
     <div class="article-header">

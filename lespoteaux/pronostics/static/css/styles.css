@@ -2,11 +2,37 @@
 #e9c384 jaune
 #de242a rouge
 #1f3379 bleu fonce */
-
-body{
+@font-face {
+  font-family: Bebas;
+  src: url('../font/BebasNeue-Regular.ttf');
+}
+html, body{
   margin: 0;
   padding: 0;
   background-color: #1f3379;
+}
+
+.background-image{
+  height: 100vh;
+  background-color: #1e317b;
+  position: relative;
+}
+
+#logo-background{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+}
+
+#down-arrow{
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -98%);
+  font-size: 30px;
+  color: #eac47f;
 }
 
 p{
@@ -19,6 +45,8 @@ nav{
   background-color: #1f3379;
   position: relative;
   height: 75px;
+  font-family: Bebas;
+  font-size: 20px;
 }
 
 nav ul{
@@ -94,15 +122,24 @@ nav ul li a:hover{
 }
 
 .header{
-  width: auto;
-  height: 60vh;
+  height: 85vh;
   background-color: #1f3379;
   padding: 10px;
   position: relative;
 }
 
 .header img{
-  max-height: 100%;
+  max-height: 90%;
+}
+
+
+.header i{
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  font-size: 25px;
+  transform: translate(-50%, -2%);
+  color: #e9c384;
 }
 
 .row:after{
@@ -161,6 +198,55 @@ nav ul li a:hover{
   color: #e9c384;
   margin-top: 10px;
   padding-bottom: 50px;
+}
+
+.register-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dedede;
+  padding: 8px;
+  width: 350px;
+  text-align: center;
+}
+
+#register-logo{
+  font-size: 35px;
+  color: black;
+}
+
+.register-form input{
+  display: block;
+  background-color: #dedede;
+  border: none;
+  margin: 10px auto;
+  width: 180px;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+}
+
+.register-form button{
+  padding: 8px;
+  margin: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.8s;
+  width: 196px;
+}
+
+.register-form button:hover{
+  background-color: white;
+  color: black;
+}
+
+.email-input{
+  display: inline-block;
+}
+
+.email-input i{
+  float: left;
+  margin: 10px;
 }
 
 @media (max-width: 768px) {
